@@ -31,7 +31,7 @@ Each video below walks through a core section of the report:
 
 - [🔄 FleetLeasing ELT Process](./FleetLeasingELT_Process.md) – Data extraction, transformation, and model design  
 - [🧮 FleetLeasing DAX Logic](./FleetLeasingDAX.md) – KPI calculations, filter logic, and business rules  
-- [🎞️ FleetLeasing Presentation](./Assets/FleetLeasing_Presentation.pptx) – Interactive PowerPoint with embedded report and narrative overview
+- [🎞️ FleetLeasing Presentation](./FleetLeasing_Presentation.pptx) – Interactive PowerPoint with embedded report and narrative overview
 
 ---
 
