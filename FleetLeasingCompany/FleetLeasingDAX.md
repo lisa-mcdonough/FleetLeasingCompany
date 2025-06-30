@@ -6,82 +6,69 @@ This document outlines key DAX measures used in the Fleet Leasing Power BI repor
 
 ## 🔍 Win/Loss Performance
 
-- **TotalAmtWonHub**  
-  Sum of amounts marked *Closed Won* by hub.
-
-- **TotalAmtLostHub**  
-  Sum of amounts marked *Closed Lost* by hub.
-
-- **TotalWonAmount / TotalLostAmount**  
-  Overall amount values for *Closed Won* and *Closed Lost* stages.
-
-- **CountWonJobs / CountLostJobs / CountTotalJobsQuoted**  
-  Job counts by deal outcome, used in ratio calculations and KPIs.
-
-- **CountWinLossRatio / WinLossRatio# / WinLossRatio$**  
-  Various win/loss ratios, with logic to display messages like “No Jobs Won” when counts are zero.
-
-- **WinLossRatioSwitch-HASONEVALUE / WinLossRatioSwitch**  
-  Dynamic text-based outputs that adapt based on year selection or win/loss state.
+| **Measure**                        | **Description**                                                           |
+|------------------------------------|---------------------------------------------------------------------------|
+| `TotalAmtWonHub`                  | Sum of opportunity amounts marked *Closed Won* by Hub                     |
+| `TotalAmtLostHub`                 | Sum of opportunity amounts marked *Closed Lost* by Hub                    |
+| `TotalWonAmount` / `TotalLostAmount` | Totals for all Won and Lost opportunities                                |
+| `CountWonJobs` / `CountLostJobs` / `CountTotalJobsQuoted` | Job counts by outcome: won, lost, quoted                  |
+| `CountWinLossRatio` / `WinLossRatio#` / `WinLossRatio$` | Various win/loss ratios with fallback messaging on zero counts          |
+| `WinLossRatioSwitch` / `WinLossRatioSwitch-HASONEVALUE` | Dynamic messages adjusting by selection context                         |
 
 ---
 
-## 📈 Trend & Time-Based Measures
+## 📈 Trend & Time Intelligence
 
-- **CumulativeLostJobs**  
-  Cumulative count of closed lost jobs over time using the `ALL('Date')` pattern.
-
-- **CountLostJobsOverTime**  
-  Count of lost jobs using a date range (for line charts or forecasting).
-
-- **PreviousYearAmtWon / %ChangeAmtWon**  
-  Amount won for prior year and its % change vs. current.
+| **Measure**            | **Description**                                                          |
+|------------------------|--------------------------------------------------------------------------|
+| `CumulativeLostJobs`   | Accumulates *Closed Lost* jobs over time using `ALL('Date')`             |
+| `CountLostJobsOverTime` | Filtered count for *Closed Lost* jobs, used in line charts or forecasting |
+| `PreviousYearAmtWon`   | Prior year’s total won amount                                            |
+| `%ChangeAmtWon`        | Year-over-year change in amount won                                      |
 
 ---
 
-## 🎯 Target & Adjustment Metrics
+## 🎯 Target & Goal Adjustments
 
-- **TargetLostAmt / AdjustedTargetLostAmt**  
-  Targets based on user-selected reduction percentages.
-
-- **TargetWonAmt / AdjustedWonAmount**  
-  Targets for growth based on selected uplift values.
+| **Measure**             | **Description**                                                                 |
+|-------------------------|---------------------------------------------------------------------------------|
+| `TargetLostAmt`         | Target reduction value for Lost Amount                                          |
+| `AdjustedTargetLostAmt` | Final Lost Amount target after applying user-defined reduction %                |
+| `TargetWonAmt`          | Projected goal for increased Won Amount                                         |
+| `AdjustedWonAmount`     | Final Won target adjusted for user-specified uplift                            |
 
 ---
 
-## 📊 Account, Facility & Commodity Insights
+## 🏢 Account, Facility & Commodity Metrics
 
-- **LostAmountByAccount / WonAmountByAccount / LostAmountByFacility**  
-  Aggregated amounts tied to Accounts, Facilities, or Hubs.
-
-- **FilteredAccounts**  
-  Displays accounts with *Closed Lost* but no *Closed Won*.
-
-- **RankAccountByLostAmount / RankAccountByWonAmount / RankCommodityByLostAmount**  
-  Ranking logic to order performance by amount fields.
-
-- **Total Commodities / Total Select Commodity**  
-  Useful for calculating proportional contributions of each commodity.
+| **Measure**                  | **Description**                                                       |
+|------------------------------|-----------------------------------------------------------------------|
+| `LostAmountByAccount`        | Sum of *Closed Lost* amounts grouped by Account                       |
+| `WonAmountByAccount`         | Sum of *Closed Won* amounts grouped by Account                        |
+| `LostAmountByFacility`       | Facility-level breakdown of lost opportunity amounts                  |
+| `FilteredAccounts`           | Filters to accounts with Lost but no Won opportunities                |
+| `RankAccountByLostAmount`    | Rank by amount lost per account                                       |
+| `RankAccountByWonAmount`     | Rank by amount won per account                                        |
+| `RankCommodityByLostAmount`  | Commodity-level rank by lost amount                                   |
+| `Total Commodities` / `Total Select Commodity` | Used for proportional shares in visualizations              |
 
 ---
 
 ## 🧩 UX & Labeling Measures
 
-- **TitleSelectedProduct%Total / TitleSelectedProductLost / TitleSelectedProductWon**  
-  Custom labels reflecting user selections in visuals.
-
-- **Account Name / Opportunity Owner / JobNumber**  
-  Text-based helpers for drillthrough, filters, and dynamic titles.
+| **Measure**                     | **Description**                                                    |
+|----------------------------------|--------------------------------------------------------------------|
+| `TitleSelectedProduct%Total`    | Custom label: selected product as % of total                       |
+| `TitleSelectedProductLost` / `TitleSelectedProductWon` | Visual titles that adjust with user filters         |
+| `Account Name` / `Opportunity Owner` / `JobNumber` | Text-based helpers for drillthrough and filtering       |
 
 ---
 
-## 🔄 Miscellaneous
+## 🧠 Performance Flags & Helpers
 
-- **NoWinJobCount / NoWinsCount**  
-  Conditional metrics for flagging underperformance.
-
-- **CountLostJobsByFacility**  
-  Useful for bar/column visuals across hubs.
-
-- **SumCommodityTest2**  
-  Test measure filtering *Closed Lost* and grouping by product.
+| **Measure**            | **Description**                                                   |
+|------------------------|-------------------------------------------------------------------|
+| `NoWinJobCount`        | Conditional count where jobs were quoted but never won            |
+| `NoWinsCount`          | Aggregated underperformance alert logic                          |
+| `CountLostJobsByFacility` | Used in comparative visuals by Hub or location                |
+| `SumCommodityTest2`    | Filtered total for *Closed Lost* grouped by product (test logic)  |
