@@ -20,10 +20,10 @@ This Power BI report analyzes win/loss trends for the **fleet leasing industry**
 
 Each video below walks through a core section of the report:
 
-- [![Location Analysis ➜](./Assets/PNG-LocationAnalysis.png)](https://youtu.be/OHdYXJLNDXo)
-- [![Sales Rep Analysis ➜](./Assets/PNG-SalesRepAnalysis.png)](https://youtu.be/UzrGFsMSg3A)
-- [![Product Analysis ➜](./Assets/PNG-ProductAnalysis.png)](https://youtu.be/Rso83NkXpQQ)
-- [![Account Analysis ➜](./Assets/PNG-AccountAnalysis.png)](https://youtu.be/WHrV6jSXY74)
+- [![Location Analysis ➜](./Assets/PNG-LocationAnalysisFL.png)](https://youtu.be/OHdYXJLNDXo)
+- [![Sales Rep Analysis ➜](./Assets/PNG-SalesRepAnalysisFL.png)](https://youtu.be/UzrGFsMSg3A)
+- [![Product Analysis ➜](./Assets/PNG-ProductAnalysisFL.png)](https://youtu.be/Rso83NkXpQQ)
+- [![Account Analysis ➜](./Assets/PNG-AccountAnalysisFL.png)](https://youtu.be/WHrV6jSXY74)
 
 ---
 
