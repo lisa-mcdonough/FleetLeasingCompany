@@ -28,7 +28,7 @@ Each video below walks through a core section of the report:
 ---
 ### 🚗 *Fleet Leasing – View & Download*
 
-- 🌐 [**View Interactive Report (Power BI Service)**](https://app.powerbi.com/links/9p2tc46DrA?ctid=b8847cd9-049c-4193-9096-958b6037320f&pbi_source=linkShare)  
+- 🌐 [**View Interactive Report (Power BI Service)**](https://app.powerbi.com/view?r=eyJrIjoiYjkxYTFiNTctZWFmZC00ZWNlLTg3ZmQtNzY3NWYzYTBmMmEwIiwidCI6ImI4ODQ3Y2Q5LTA0OWMtNDE5My05MDk2LTk1OGI2MDM3MzIwZiIsImMiOjN9)  
   Explore win/loss performance, account KPIs, and trends live in the browser.
 
 - 💾 [**Download .pbix file**](https://github.com/lisa-mcdonough/FleetLeasingCompany/raw/main/FleetLeasingCompany/FleetLeasing.pbix)  
