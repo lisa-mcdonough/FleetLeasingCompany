@@ -43,7 +43,7 @@ Each video below walks through a core section of the report:
 ## 📄 Project Documentation
 - [🔄 Fleet Leasing ELT Process](https://github.com/lisa-mcdonough/FleetLeasingCompany/blob/main/FleetLeasingCompany/FleetLeasingELT.md) – Data extraction, transformation, and model design  
 - [🧮 Fleet Leasing DAX Logic](https://github.com/lisa-mcdonough/FleetLeasingCompany/blob/main/FleetLeasingCompany/FleetLeasingDAX.md) – KPI calculations, filter logic, and business rules  
-- [🎞️ Fleet Leasing PowerPoint](https://github.com/lisa-mcdonough/FleetLeasingCompany/blob/main/FleetLeasingCompany/Assets/FleetLeasingPowerPoint.pptx) – Download the PowerPoint to view the embedded web link to the FleetLeasing Power BI Report  
+- [🎞️ Fleet Leasing PowerPoint](https://github.com/lisa-mcdonough/FleetLeasingCompany/blob/main/FleetLeasingCompany/Assets/FleetLeasingPowerPoint.ppsx) – Download the PowerPoint; the second page contains the Power BI report link. 
 
 ---
 
