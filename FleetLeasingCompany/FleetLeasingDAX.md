@@ -125,7 +125,7 @@ RETURN
         FORMAT(DIVIDE(Won, Lost), "0.0") & " Win/Loss Ratio"
     )
 ```
-... (Truncated due to size, continuation follows in next cell)
+
 
 ## 📈 Trend & Time-Based Measures
 
@@ -177,24 +177,26 @@ DIVIDE (
 Targets based on user-selected reduction percentages.
 
 ```DAX
-TargetLostAmt = [TotalLostAmount] * 0.9
+TargetLostAmt =
+[TotalLostAmount]
+    * SELECTEDVALUE ( 'Target for Lost Amt Decrease'[Target for Lost Amt Decrease] )
 
 AdjustedTargetLostAmt =
-VAR Reduction = SELECTEDVALUE ( 'Target Settings'[Reduction %], 0.1 )
-RETURN
-    [TotalLostAmount] * ( 1 - Reduction )
+[TargetLostAmt] * ( 'Target for Lost Amt Decrease'[Target for Lost Amt Decrease Value] )
+
 ```
 
 ### **TargetWonAmt / AdjustedWonAmount**  
 Targets for growth based on selected uplift values.
 
 ```DAX
-TargetWonAmt = [TotalWonAmount] * 1.1
+TargetWonAmt =
+[TotalWonAmount]
+    * SELECTEDVALUE ( 'Target for Won Amt Increase '[Target for Won Amt Increase =] )
 
-AdjustedWonAmount =
-VAR Uplift = SELECTEDVALUE ( 'Target Settings'[Uplift %], 0.1 )
-RETURN
-    [TotalWonAmount] * ( 1 + Uplift )
+TargetLostAmt = ([TotalLostAmount]
+    * SELECTEDVALUE ( 'TargetforLostAmtDecrease'[TargetforLostAmtDecrease] ))*-1
+
 ```
 
 ## 📊 Account, Facility & Commodity Insights
@@ -232,24 +234,6 @@ CALCULATE(
         WonLostPipeline,
         NOT(ISBLANK(WonLostPipeline[Hub])) && WonLostPipeline[Stage] = "Closed Lost"
     )
-)
-```
-... (Will finish and append the rest in the next step)
-
-### **FilteredAccounts**  
-Displays accounts with Closed Lost but no Closed Won.
-
-```DAX
-FilteredAccounts = 
-VAR AccountsWithClosedWon =
-    SELECTCOLUMNS (
-        FILTER ( WonLostPipeline, WonLostPipeline[Stage] = "Closed Won" ),
-        "Account Name", WonLostPipeline[Account Name]
-    )
-RETURN
-EXCEPT (
-    VALUES ( WonLostPipeline[Account Name] ),
-    AccountsWithClosedWon
 )
 ```
 
