@@ -20,7 +20,7 @@ This Power BI report analyzes win/loss trends for the **fleet leasing industry**
 
 Each video below walks through a core section of the report:
 
-- [![Account Analysis ➜](https://github.com/lisa-mcdonough/FleetLeasingCompany/blob/main/FleetLeasingCompany/Assets/PNG-AccountAnalysisFL.png)](https://youtu.be/WHrV6jSXY74)
+- [![Account Analysis ➜](https://github.com/lisa-mcdonough/FleetLeasingCompany/blob/main/FleetLeasingCompany/Assets/PNG-AccountAnalysisFL.png)](https://youtu.be/1h_xvRDFu_A)
 - [![Sales Rep Analysis ➜](https://github.com/lisa-mcdonough/FleetLeasingCompany/blob/main/FleetLeasingCompany/Assets/PNG-SalesRepAnalysisFL.png)](https://youtu.be/UzrGFsMSg3A)
 - [![Product Analysis ➜](https://github.com/lisa-mcdonough/FleetLeasingCompany/blob/main/FleetLeasingCompany/Assets/PNG-ProductAnalysisFL.png)](https://youtu.be/Rso83NkXpQQ)
 - [![Location Analysis ➜](https://github.com/lisa-mcdonough/FleetLeasingCompany/blob/main/FleetLeasingCompany/Assets/PNG-LocationAnalysisFL.png)](https://youtu.be/OHdYXJLNDXo)
